@@ -5,8 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, quisquam?">
   <title>Vibo - the best mobile app</title>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-logo">
+          <img src="./img/logo.svg" alt="">
+          <span class="nav-logo__text">Groove</br>App</span>
+        </div>
+        <div class="nav-menu" id="menu">
+          <button class="nav-menu__toggler" data-target="#menu">
+            <i class="fal fa-times"></i>
+          </button>
+          <ul>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Home</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">About</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">App</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Info</a>
+            </li>
+          </ul>
+        </div>
+        <button class="nav-toggler" data-target="#menu">
+          <i class="fal fa-bars"></i>
+        </button>
+      </nav>
+      <section class="intro">
+        <div class="intro-row">
+          <div class="intro-content">
+            <h1 class="intro__title">Choose a better way to represent your app</h1>
+            <p class="intro__subtitle">Vestibulum ac diam sit amet quam vehicula elementum.</p>
+            <div class="intro-btn-group">
+              <a href="#" class="intro-btn-group__btn">Download Free</a>
+              <a href="#" class="intro-btn-group__btn">Contact Us</a>
+            </div>
+          </div>
+          <div class="intro-mockup">
+            <img src="./img/phone-mockup.png" alt="" srcset="">
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
 
+  <script src="./js/main.js"></script>
 </body>
 </html>
