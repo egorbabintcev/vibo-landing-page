@@ -1,30 +1,30 @@
 @import 'include-media/dist/include-media';
 
 @mixin make-container() {
-	width: 100%;
+  width: 100%;
 
-    @include media('>xl') {
-		max-width: 1170px
-    }
-	@include media('<=xl', '>lg') {
-		max-width: 990px
-    }
-	@include media('<=lg', '>md') {
-		max-width: 750px
-    }
-    @include media('<=md', '>sm') {
-		max-width: 570px
-    }
-	margin: 0 auto;
-	padding: {
-		left: $grid-gutter / 2;
-		right: $grid-gutter / 2;
-    }
+  @include media('>xl') {
+    max-width: 1170px
+  }
+  @include media('<=xl', '>lg') {
+    max-width: 990px
+  }
+  @include media('<=lg', '>md') {
+    max-width: 750px
+  }
+  @include media('<=md', '>sm') {
+    max-width: 570px
+  }
+  margin: 0 auto;
+  padding: {
+    left: $grid-gutter / 2;
+    right: $grid-gutter / 2;
+  }
 }
 
 @mixin make-row() {
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat($grid-columns, 1fr);
-    grid-gap: $grid-gutter;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $grid-gutter;
 }
