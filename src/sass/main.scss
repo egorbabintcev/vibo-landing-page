@@ -46,7 +46,7 @@ header {
       position: fixed;
       top: 0;
       right: -50%;
-      background: #0ecff0;
+      background: $accent--light-blue;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -278,6 +278,99 @@ body {
     font: {
       size: 1.4rem;
       weight: 400;
+    }
+  }
+}
+
+.about {
+  padding: {
+    top: 85px;
+    bottom: 110px;
+  }
+  background-color: $light;
+  &-row {
+    @include make-row();
+  }
+  &-content {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+    @include media('<lg') {
+      grid-column: span 12;
+      margin-bottom: 30px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+  &-accordeon {
+    grid-column: 7/span 6;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    @include media('<lg') {
+      grid-column: span 12;
+    }
+  }
+  &__title {
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 25px;
+    color: $accent--dark-blue;
+    font-size: 1.4rem;
+    line-height: 180%;
+  }
+  &__button {
+    padding: 20px 45px;
+    background-color: $accent--light-blue;
+    color: $light;
+    font: {
+      size: 1.4rem;
+      weight: 600;
+    }
+    border-radius: 5px;
+  }
+  &-card {
+    display: flex;
+    align-items: center;
+    padding: {
+      top: 25px;
+      bottom: 25px;
+      left: 25px;
+      right: 80px;
+    }
+    margin-bottom: 20px;
+    box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.1);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 25px;
+      align-self: flex-start;
+    }
+    &__title {
+      font: {
+        size: 1.6rem;
+        weight: 600;
+      }
+    }
+    &__subtitle {
+      display: none;
     }
   }
 }
