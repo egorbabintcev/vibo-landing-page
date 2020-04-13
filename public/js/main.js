@@ -4,3 +4,5 @@ togglers.forEach((toggler) => {
     document.querySelector(toggler.dataset.target).classList.toggle('nav-menu_expanded');
   })
 })
+
+// TODO accordeon script for 'about' block
