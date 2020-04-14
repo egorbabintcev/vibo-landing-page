@@ -54,7 +54,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.watch.public).on('change', browserSync.reload);
 })
 
-gulp.task('dev', gulp.parallel('server', 'watch'));
+gulp.task('dev', gulp.series('styles', gulp.parallel('server', 'watch')));
 
 gulp.task('build', gulp.parallel('styles', 'images'));
 
