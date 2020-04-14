@@ -340,7 +340,7 @@ body {
   }
   &-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding: {
       top: 25px;
       bottom: 25px;
@@ -349,8 +349,16 @@ body {
     }
     margin-bottom: 20px;
     box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.1);
+    transition: .25s;
+    cursor: pointer;
     &:last-child {
       margin-bottom: 0;
+    }
+    &.active {
+      background-color: $accent--light-blue;
+      & .about-card__title {
+        margin-bottom: 15px;
+      }
     }
     &__text {
       display: flex;
@@ -360,18 +368,23 @@ body {
     &__icon {
       width: 30px;
       height: 30px;
-      margin-right: 25px;
-      align-self: flex-start;
+      &-wrapper {
+        margin-right: 25px;
+        align-self: flex-start;
+      }
     }
     &__title {
-      margin-bottom: 15px;
+      transition: .25s;
       font: {
         size: 1.6rem;
         weight: 600;
       }
     }
-    // TODO styles for height transition
     &__subtitle {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s;
+      color: $light;
       line-height: 140%;
       font-size: 1.4rem;
     }
