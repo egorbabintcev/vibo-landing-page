@@ -37,7 +37,21 @@ gulp.task('styles', () => {
 
 gulp.task('images', () => {
   return gulp.src(paths.src.img)
-    .pipe(imagemin())
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [
+          { optimizationLevel: 3 },
+          { progessive: true },
+          { interlaced: true },
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: false },
+          { cleanupIDs: false }
+       ]
+     }),
+     imagemin.gifsicle(),
+     imagemin.mozjpeg({ progessive: true }),
+     imagemin.optipng()
+    ]))
     .pipe(gulp.dest('./public/img/'))
 })
 
