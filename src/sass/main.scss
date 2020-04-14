@@ -340,7 +340,7 @@ body {
   }
   &-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: {
       top: 25px;
       bottom: 25px;
@@ -364,6 +364,7 @@ body {
       align-self: flex-start;
     }
     &__title {
+      margin-bottom: 15px;
       font: {
         size: 1.6rem;
         weight: 600;
@@ -371,7 +372,8 @@ body {
     }
     // TODO styles for height transition
     &__subtitle {
-      display: none;
+      line-height: 140%;
+      font-size: 1.4rem;
     }
   }
 }
