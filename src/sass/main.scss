@@ -390,3 +390,62 @@ body {
     }
   }
 }
+
+.compatibility {
+  padding: 50px 0;
+  &-row {
+    @include make-row;
+  }
+  &-code {
+    grid-column: span 6;
+    @include media('<lg') {
+      order: 2;
+      grid-column: span 12;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  &-content {
+    grid-column: 8/ span 5;
+    @include media('<lg') {
+      order: 1;
+      grid-column: span 12;
+    }
+  }
+  &__title {
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+  }
+  &__list {
+    margin-bottom: 30px;
+    & li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-icon {
+      margin-right: 15px;
+      font-size: 2rem;
+      color: $accent--light-blue;
+    }
+    &-text {
+      font: {
+        size: 1.6rem;
+        weight: 600;
+      }
+    }
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    line-height: 170%;
+    color: $accent--dark-blue;
+  }
+}
