@@ -449,3 +449,67 @@ body {
     color: $accent--dark-blue;
   }
 }
+
+.download {
+  padding: {
+    top: 110px;
+    bottom: 50px;
+  }
+  background: {
+    image: url('../img/download-bg.svg');
+    repeat: no-repeat;
+    size: 100% 100%;
+  }
+  &-row {
+    @include make-row;
+  }
+  &-mockup {
+    grid-column: 3/span 3;
+    @include media('<lg') {
+      grid-column: span 3;
+    }
+    @include media('<sm') {
+      display: none;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  &-content {
+    grid-column: 7/span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include media('<lg') {
+      grid-column: 5/span 8;
+    }
+    @include media('<sm') {
+      grid-column: span 12;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 45px;
+    color: $light;
+    font-size: 1.4rem;
+    line-height: 170%;
+  }
+  &-btn-group {
+    display: flex;
+    align-items: center;
+    & a {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
